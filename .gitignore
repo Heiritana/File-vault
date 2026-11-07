@@ -218,3 +218,21 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# ==========================================
+# Vault System - Specific exclusions
+# ==========================================
+
+# Runtime authentication and application metadata
+.master_password
+.encrypted_info
+.credentials
+
+# Files created or processed by the application
+encrypted_files/
+decrypted_files/
+*.aes
+
+# Packaged Windows executable
+Vault.exe
