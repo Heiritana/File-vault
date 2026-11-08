@@ -2,7 +2,7 @@
 
 An undergraduate Python desktop application developed to explore file encryption, password-based access control, file-integrity checking and local credential storage.
 
-> \\\\\\\\\\\\\\\*\\\\\\\\\\\\\\\*Project status:\\\\\\\\\\\\\\\*\\\\\\\\\\\\\\\* Academic final-year project (2025). This repository preserves the original submitted implementation. It is provided for educational review and demonstration, not as a production-ready password manager or secure storage product.
+> \*\*Project status:\*\* Academic final-year project (2025). This repository preserves the original submitted implementation. It is provided for educational review and demonstration, not as a production-ready password manager or secure storage product.
 
 ## Project context
 
@@ -53,16 +53,16 @@ The application is implemented in a single Python source file, `Vault.py`, using
 
 ```mermaid
 flowchart TD
-    A\\\\\\\\\\\\\\\[Launch application] --> B{Master-password record exists?}
-    B -- No --> C\\\\\\\\\\\\\\\[Create master password]
-    B -- Yes --> D\\\\\\\\\\\\\\\[Login]
+    A\\\[Launch application] --> B{Master-password record exists?}
+    B -- No --> C\\\[Create master password]
+    B -- Yes --> D\\\[Login]
     C --> D
-    D --> E\\\\\\\\\\\\\\\[Main menu]
-    E --> F\\\\\\\\\\\\\\\[Encrypt file]
-    E --> G\\\\\\\\\\\\\\\[View and decrypt files]
-    E --> H\\\\\\\\\\\\\\\[Compare SHA-256 digest]
-    E --> I\\\\\\\\\\\\\\\[Manage stored credentials]
-    E --> J\\\\\\\\\\\\\\\[Reset vault]
+    D --> E\\\[Main menu]
+    E --> F\\\[Encrypt file]
+    E --> G\\\[View and decrypt files]
+    E --> H\\\[Compare SHA-256 digest]
+    E --> I\\\[Manage stored credentials]
+    E --> J\\\[Reset vault]
 ```
 
 ## Generated local data
@@ -71,11 +71,11 @@ When the application is run, it creates local runtime data in its working direct
 
 |Runtime item|Purpose|
 |-|-|
-|`.master\\\\\\\\\\\\\\\_password`|Stores the salt, PBKDF2 iteration count and derived master-password hash|
-|`.encrypted\\\\\\\\\\\\\\\_info`|Stores encrypted-file metadata, including the file key and recorded SHA-256 digest|
+|`.master\\\_password`|Stores the salt, PBKDF2 iteration count and derived master-password hash|
+|`.encrypted\\\_info`|Stores encrypted-file metadata, including the file key and recorded SHA-256 digest|
 |`.credentials`|Stores the application's encrypted credential records|
-|`encrypted\\\\\\\\\\\\\\\_files/`|Holds files encrypted by the application|
-|`decrypted\\\\\\\\\\\\\\\_files/`|Holds files decrypted by the application|
+|`encrypted\\\_files/`|Holds files encrypted by the application|
+|`decrypted\\\_files/`|Holds files decrypted by the application|
 
 The application attempts to mark some of these items as hidden on Windows. The Windows hidden-file attribute is not an access-control or security boundary.
 
@@ -117,20 +117,20 @@ Open PowerShell in the repository directory:
 python -m venv .venv
 
 # Activate it
-.\\\\\\\\\\\\\\\\.venv\\\\\\\\\\\\\\\\Scripts\\\\\\\\\\\\\\\\Activate.ps1
+.\\\\.venv\\\\Scripts\\\\Activate.ps1
 
 # Install the external packages
 python -m pip install -r requirements.txt
 
 # Launch the application
-python .\\\\\\\\\\\\\\\\Vault.py
+python .\\\\Vault.py
 ```
 
 If PowerShell prevents activation, the environment can still be used without activation:
 
 ```powershell
-.\\\\\\\\\\\\\\\\.venv\\\\\\\\\\\\\\\\Scripts\\\\\\\\\\\\\\\\python.exe -m pip install -r requirements.txt
-.\\\\\\\\\\\\\\\\.venv\\\\\\\\\\\\\\\\Scripts\\\\\\\\\\\\\\\\python.exe .\\\\\\\\\\\\\\\\Vault.py
+.\\\\.venv\\\\Scripts\\\\python.exe -m pip install -r requirements.txt
+.\\\\.venv\\\\Scripts\\\\python.exe .\\\\Vault.py
 ```
 
 Use only synthetic, disposable test files when experimenting with the application. The interface includes an option to delete the selected original file after encryption, and the reset function deletes the application's stored vault data.
@@ -185,6 +185,4 @@ These are proposed improvements; they are **not implemented features** in the pr
 This repository presents the original source code from an individual undergraduate final-year project. The accompanying academic thesis is retained separately and is not included here because it contains personal academic records and contact details.
 
 No open-source licence is included in this repository. Do not assume that the absence of a licence grants permission to reuse, redistribute or modify the code. Any future licence choice should be made after checking the applicable university coursework and intellectual-property rules.
-
-
 
