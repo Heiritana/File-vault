@@ -101,20 +101,20 @@ Open PowerShell in the repository directory:
 python -m venv .venv
 
 # Activate it
-.\\.venv\\Scripts\\Activate.ps1
+.\.venv\Scripts\Activate.ps1
 
 # Install the external packages
 python -m pip install -r requirements.txt
 
 # Launch the application
-python .\\Vault.py
+python .\Vault.py
 ```
 
 If PowerShell prevents activation, the environment can still be used without activation:
 
 ```powershell
-.\\.venv\\Scripts\\python.exe -m pip install -r requirements.txt
-.\\.venv\\Scripts\\python.exe .\\Vault.py
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe .\Vault.py
 
 ```
 
