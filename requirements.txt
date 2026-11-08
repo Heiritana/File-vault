@@ -1,0 +1,3 @@
+pyAesCrypt
+pycryptodome
+tkinterdnd2
