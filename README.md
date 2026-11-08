@@ -2,7 +2,7 @@
 
 An undergraduate Python desktop application developed to explore file encryption, password-based access control, file-integrity checking and local credential storage.
 
-> \*\*Project status:\*\* Academic final-year project (2025). This repository preserves the original submitted implementation. It is provided for educational review and demonstration, not as a production-ready password manager or secure storage product.
+> **Project status:** Academic final-year project (2025). This repository preserves the original submitted implementation. It is provided for educational review and demonstration, not as a production-ready password manager or secure storage product.
 
 ## Project context
 
@@ -49,23 +49,7 @@ The application is implemented in a single Python source file, `Vault.py`, using
 * **ViewFrame:** lists encrypted files and provides decryption and SHA-256 comparison functions.
 * **CredentialsFrame:** adds, lists and retrieves stored credentials.
 
-### High-level workflow
-
-```mermaid
-flowchart TD
-    A\\\[Launch application] --> B{Master-password record exists?}
-    B -- No --> C\\\[Create master password]
-    B -- Yes --> D\\\[Login]
-    C --> D
-    D --> E\\\[Main menu]
-    E --> F\\\[Encrypt file]
-    E --> G\\\[View and decrypt files]
-    E --> H\\\[Compare SHA-256 digest]
-    E --> I\\\[Manage stored credentials]
-    E --> J\\\[Reset vault]
-```
-
-## Generated local data
+## &#x09;Generated local data
 
 When the application is run, it creates local runtime data in its working directory. These files and folders are intentionally **not** part of this source-code repository.
 
@@ -117,20 +101,21 @@ Open PowerShell in the repository directory:
 python -m venv .venv
 
 # Activate it
-.\\\\.venv\\\\Scripts\\\\Activate.ps1
+.\\.venv\\Scripts\\Activate.ps1
 
 # Install the external packages
 python -m pip install -r requirements.txt
 
 # Launch the application
-python .\\\\Vault.py
+python .\\Vault.py
 ```
 
 If PowerShell prevents activation, the environment can still be used without activation:
 
 ```powershell
-.\\\\.venv\\\\Scripts\\\\python.exe -m pip install -r requirements.txt
-.\\\\.venv\\\\Scripts\\\\python.exe .\\\\Vault.py
+.\\.venv\\Scripts\\python.exe -m pip install -r requirements.txt
+.\\.venv\\Scripts\\python.exe .\\Vault.py
+
 ```
 
 Use only synthetic, disposable test files when experimenting with the application. The interface includes an option to delete the selected original file after encryption, and the reset function deletes the application's stored vault data.
