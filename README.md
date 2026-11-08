@@ -55,11 +55,11 @@ When the application is run, it creates local runtime data in its working direct
 
 |Runtime item|Purpose|
 |-|-|
-|`.master\_password`|Stores the salt, PBKDF2 iteration count and derived master-password hash|
-|`.encrypted\_info`|Stores encrypted-file metadata, including the file key and recorded SHA-256 digest|
+|`.master_password`|Stores the salt, PBKDF2 iteration count and derived master-password hash|
+|`.encrypted_info`|Stores encrypted-file metadata, including the file key and recorded SHA-256 digest|
 |`.credentials`|Stores the application's encrypted credential records|
-|`encrypted\_files/`|Holds files encrypted by the application|
-|`decrypted\_files/`|Holds files decrypted by the application|
+|`encrypted_files/`|Holds files encrypted by the application|
+|`decrypted_files/`|Holds files decrypted by the application|
 
 The application attempts to mark some of these items as hidden on Windows. The Windows hidden-file attribute is not an access-control or security boundary.
 
